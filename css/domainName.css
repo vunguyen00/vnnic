@@ -1,27 +1,28 @@
-body{
+body {
     position: relative;
 }
-.justify-content{
+
+.justify-content {
     text-align: center;
 }
 
-.row{
+.row {
     display: flex;
     justify-content: center;
 }
 
-.row-infor{
+.row-infor {
     margin: 2vh 2vw;
     background-color: rgb(178, 178, 178);
     padding: 30px 30px;
 }
 
-.main-wrapper{
+.main-wrapper {
     justify-items: center;
     background-color: antiquewhite;
 }
 
-.main-wrapper h1{
+.main-wrapper h1 {
     border: solid red;
     padding: 2vw 2vh;
     margin: 20px;

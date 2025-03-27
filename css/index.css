@@ -16,16 +16,21 @@ body {
 /* Header cố định ở đầu trang */
 .header {
   width: 100%;
-  position: fixed; /* Giữ cố định */
+  position: fixed;
+  /* Giữ cố định */
   top: 0;
   left: 0;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 999; /* Đảm bảo nằm trên cùng */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  /* Đảm bảo nằm trên cùng */
 }
-.header + * {
-  margin-top: 18vh; /* điều chỉnh số px nếu cần */
+
+.header+* {
+  margin-top: 18vh;
+  /* điều chỉnh số px nếu cần */
 }
+
 .header-container {
   display: flex;
   align-items: center;
@@ -56,9 +61,10 @@ body {
   position: absolute;
   background-color: #fff;
   min-width: 150px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   padding: 5px 0;
-  margin-top: 10px; /* để hiển thị ngay bên dưới */
+  margin-top: 10px;
+  /* để hiển thị ngay bên dưới */
   border-radius: 4px;
 }
 
@@ -79,32 +85,36 @@ body {
 }
 
 /* Các item chính của menu */
-.nav-list > li {
-  position: relative; /* Để sub-menu có thể đặt position absolute */
+.nav-list>li {
+  position: relative;
+  /* Để sub-menu có thể đặt position absolute */
 }
 
 /* Link của menu */
-.nav-list > li > a {
+.nav-list>li>a {
   text-decoration: none;
   color: #333;
   padding: 8px;
   transition: color 0.2s ease;
 }
 
-.nav-list > li > a:hover {
-  color: #0073e6; /* Màu nhấn khi hover */
+.nav-list>li>a:hover {
+  color: #0073e6;
+  /* Màu nhấn khi hover */
 }
 
 /* Menu cho di động (ẩn trên desktop) */
 .mobile-menu-icon {
-  display: none; /* Mặc định ẩn trên desktop */
+  display: none;
+  /* Mặc định ẩn trên desktop */
   font-size: 24px;
   cursor: pointer;
 }
 
 /* Hero Section (demo) */
 .hero-section {
-  margin-top: 80px; /* chừa chỗ cho header cố định */
+  margin-top: 80px;
+  /* chừa chỗ cho header cố định */
   background: #f0f2f5;
   padding: 60px 20px;
   text-align: center;
@@ -152,22 +162,24 @@ body {
   .header-container {
     flex-wrap: wrap;
   }
-  
+
   .mobile-menu-icon {
-    display: block; /* Hiển thị nút menu trên di động */
+    display: block;
+    /* Hiển thị nút menu trên di động */
   }
-  
+
   /* Ẩn menu trên di động theo mặc định */
   .nav {
     width: 100%;
   }
-  
+
   .nav-list {
     flex-direction: column;
     background-color: #fff;
     position: static;
     gap: 0;
-    display: none; /* Ẩn hẳn khi chưa bấm menu */
+    display: none;
+    /* Ẩn hẳn khi chưa bấm menu */
   }
 
   /* Khi bật class active thì hiện menu dọc */
@@ -200,47 +212,50 @@ body {
   .header-container {
     padding: 10px 40px;
   }
-  
+
   .hero-section h1 {
     font-size: 1.8rem;
   }
-  
+
   .hero-section p {
     font-size: 0.95rem;
   }
 }
+
 .nav-pills {
-    display: flex;
-    justify-content: center; 
-    align-items: center;    
-    gap: 20px;              
-    padding: 10px;          
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
 }
 
 .nav-pills a {
-    color: gray;
-    text-decoration: none;
-    padding: 10px 20px;   
-    border-radius: 4px;   
+  color: gray;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
 }
 
 .nav-pills a:hover {
-    color: #0073e6;
+  color: #0073e6;
 }
 
-.stats-row{
-    width: 100%;
-    margin: 2px;
-    display: flex;
-    justify-content: center;
+.stats-row {
+  width: 100%;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
 }
 
-.stats-infor{
-    padding: 30px;
-    background-color: #555759;
-    margin: 2px;
+.stats-infor {
+  padding: 30px;
+  background-color: #555759;
+  margin: 2px;
 }
-html, body {
+
+html,
+body {
   height: 100%;
   margin: 0;
   display: flex;
