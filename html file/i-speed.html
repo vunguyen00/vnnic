@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNNIC Internet Atlas</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/domainName.css">
+  <script src="/js/index.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href=""><img src="https://png.pngtree.com/png-clipart/20190611/original/pngtree-wolf-logo-png-image_2306634.jpg" alt="VNNIC Logo"></a>
+      </div>
+      <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+        &#9776;
+      </div>
+      <div id="navbar-container"></div>
+      <script>
+        fetch('./components/navbar.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('navbar-container').innerHTML = data);
+      </script>
+    </div>
+  </header>
+  <tbody>
+    <div class="justify-content">
+      <h1>HE THONG DO TOC DO MANG</h1>
+      <h1>(VNNIC INTERNET SPEED)</h1>
+      <H1>image LOGO</H1>
+      
+      <div class="row">
+        <div class="row-infor"><h3>Tong so luong dia chi IPv4</h3></div>
+        <div class="row-infor"><h3>Tong so luong dia chi IPv6</h3></div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+      <h2>CHON THOI GIAN <input id="datepicker" onchange="" readonly="readonly"></h2>
+      <div class="chart">
+        <h1>tang truong ipv4 qua cac nam</h1>
+        <h1>tang truong ipv6 qua cac nam</h1>
+        <h1>so luong ten mien duy tri luy ke theo do dai ky tu nhan ten mien</h1>
+        <div class="row">
+          <h1>so luong ten mien phat trien moi theo nha dang ky</h1>
+          <h1>co cau ten mien duy tri luy ke theo nha dang ky</h1>
+        </div>
+        <h1>ty le su dung dich vu ten mien</h1>
+      </div>
+    </div>
+  </tbody>
+  <footer style="text-align:center;">
+    <h1>mot so thong tin khac</h1>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNNIC Internet Atlas</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="index.js">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href=""><img src="https://png.pngtree.com/png-clipart/20190611/original/pngtree-wolf-logo-png-image_2306634.jpg" alt="VNNIC Logo"></a>
+      </div>
+      <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+        &#9776;
+      </div>
+      <div id="navbar-container"></div>
+      <script>
+        fetch('./components/navbar.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('navbar-container').innerHTML = data);
+      </script>
+    </div>
+  </header>
+  
+</body>
+</html>

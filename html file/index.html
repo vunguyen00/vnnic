@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNNIC Internet Atlas</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <script src="/js/index.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href=""><img src="https://png.pngtree.com/png-clipart/20190611/original/pngtree-wolf-logo-png-image_2306634.jpg" alt="VNNIC Logo"></a>
+      </div>
+      <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+        &#9776;
+      </div>
+      <div id="navbar-container"></div>
+      <script>
+        fetch('./components/navbar.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('navbar-container').innerHTML = data);
+      </script>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>VNNIC INTERNET ATLAS</h1>
+      <p>Hệ thống VNNIC Internet Atlas là nơi tập hợp các bản đồ, biểu đồ...</p>
+      <button class="cta-btn">Khám phá ngay</button>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <h1>Số liệu thống kê</h1>
+    <!-- Thêm data-target vào các thẻ <a> để xác định phần nội dung tương ứng -->
+    <div class="nav nav-pills">
+      <a href="javascript:void(0)" data-target="domainStats" onclick="showStats('domainStats', this)">
+        <h3>Tên miền ".vn"</h3>
+      </a>
+      <a href="javascript:void(0)" data-target="ipStats" onclick="showStats('ipStats', this)">
+        <h3>IPv4, Ipv6 tại Việt Nam</h3>
+      </a>
+      <a href="javascript:void(0)" data-target="vnixStats" onclick="showStats('vnixStats', this)">
+        <h3>Kết nối VNIX</h3>
+      </a>
+    </div>
+
+    <!-- Các phần nội dung cần ẩn/hiện -->
+    <div id="domainStats" class="stats-content">
+      <div class="stats-row">
+        <div class="stats-infor">Tổng số tên miền đang duy trì trên hệ thống</div>
+        <div class="stats-infor">Tổng số tên miền phát triển mới trong năm</div>
+      </div>
+    </div>
+
+    <div id="ipStats" class="stats-content" style="display: none;">
+      <div class="stats-row">
+        <div class="stats-infor">Tổng số lượng địa chỉ IPv4</div>
+        <div class="stats-infor">Tổng số lượng địa chỉ IPv6</div>
+      </div>
+    </div>
+
+    <div id="vnixStats" class="stats-content" style="display: none;">
+      <div class="stats-row">
+        <div class="stats-infor">Số lượng thành viên VNIX</div>
+        <div class="stats-infor">Số điểm kết nối VNIX</div>
+        <div class="stats-infor">Tổng băng thông kết nối</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <h2>Một số phần khác</h2>
+    <p>Nội dung chi tiết...</p>
+  </section>
+  <footer style="text-align:center;">
+    <h1>mot so thong tin khac</h1>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNNIC Internet Atlas</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/domainName.css">
+  <script src="/js/index.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href=""><img src="https://png.pngtree.com/png-clipart/20190611/original/pngtree-wolf-logo-png-image_2306634.jpg" alt="VNNIC Logo"></a>
+      </div>
+      <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+        &#9776;
+      </div>
+      <div id="navbar-container"></div>
+      <script>
+        fetch('./components/navbar.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('navbar-container').innerHTML = data);
+      </script>
+    </div>
+  </header>
+  <tbody>
+    <div class="justify-content">
+      <h1>THỐNG KÊ TÊN MIỀN ".VN"</h1>
+      <h1>.VN</h1>
+      <h1>NANG TAM THUONG HIEU</h1>
+      <H1>TAO NIEM TIN</H1>
+      
+      <div class="row">
+        <div class="row-infor"><h3>Tong so mien hoat dong</h3></div>
+        <div class="row-infor"><h3>Tong so mien phat trien moi trong nam</h3></div>
+        <div class="row-infor"><h3>so luong nha dang ky</h3></div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+      <h2>CHON THOI GIAN <input id="datepicker" onchange="" readonly="readonly"></h2>
+      <div class="chart">
+        <h1>so do so luong ten mien tich luy ke</h1>
+        <div class="row">
+          <div><h1>co cau ten mien duy tri luy ke theo chu the dang ky</h1></div>
+          <div><h1>co cau ten mien duy tri theo luy ke duoi</h1></div>
+        </div>
+        <h1>so luong ten mien duy tri luy ke theo do dai ky tu nhan ten mien</h1>
+        <div class="row">
+          <h1>so luong ten mien phat trien moi theo nha dang ky</h1>
+          <h1>co cau ten mien duy tri luy ke theo nha dang ky</h1>
+        </div>
+        <div class="row">
+          <div ><h1>co cau ten mien duy tri luy ke theo khu vuc dia li</h1>
+          <h1>co cau ten mien duy tri luy ke ngoai lanh tho VIET NAM</h1></div>
+          <h1>co cau ten mien duy tri luy ke theo tin/ thanh pho trong nuoc</h1>
+        </div>
+        <h1>ty le su dung dich vu ten mien</h1>
+      </div>
+    </div>
+  </tbody>
+  <footer style="text-align:center;">
+    <h1>mot so thong tin khac</h1>
+  </footer>
+</body>
+</html>
